@@ -28,12 +28,14 @@ Some requirements are left intentionally vague:
   * Host your Kubernetes cluster in AWS
   * Host your Docker image on dockerhub.com
   * Deploy your application with Helm
+  * Deploy your infrastructure with Terraform
   * Install a Kubernetes Dashboard
   * Install New Relic APM in your application
 
 ## Double Extra Credit
   * Enable us to load your application in our browser
   * Enable us to view pod CPU and RAM usage in New Relic
+  * CD pipeline that builds and deploys on every commit/push
 
 ## Submission
 Once the exercise is completed, the candidate must do the following:
