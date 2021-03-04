@@ -30,8 +30,7 @@ Some requirements are left intentionally vague:
   * Deploy your application with Helm
   * Deploy your infrastructure with Terraform
   * Install a Kubernetes Dashboard
-  * Install New Relic Infrastructure in Kubernetes (monitoring)
-  * Install New Relic APM in your application (monitoring)
+  * Install APM in your application (monitoring)
 
 ## Double Extra Credit
   * Enable us to load your application in our browser
