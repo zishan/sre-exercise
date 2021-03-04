@@ -33,6 +33,7 @@ Some requirements are left intentionally vague:
 
 ## Double Extra Credit
   * Enable us to load your application in our browser
+  * Enable us to view pod CPU and RAM usage in New Relic
 
 ## Submission
 Once the exercise is completed, the candidate must do the following:
