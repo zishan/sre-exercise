@@ -15,14 +15,14 @@ Some requirements are left intentionally vague:
   * You may run a Docker registry and Kubernetes on your localhost (see Docker Desktop).
   * There must be Docker image(s) built from a Dockerfile in the application source code.
   * There must be Kubernetes deployment, service and ingress definitions used to start the application with reference to the aforementioned Docker image(s).
-  * There must be Kubernetes monitoring instrumented using New Relic.
+  * There must be CPU and RAM monitoring for the Kubernetes PODs.
 
 ## Requirements
-  * We must be able to view your application code, Dockerfile, Kubernetes manifests and New Relic instrumentation.
+  * We must be able to view your application code, Dockerfile, Kubernetes manifests and monitoring configuration.
   * You must be able to deploy the application using kubectl commands
   * You must be able to view application deployment status using kubectl commands
   * You must be able to successfully load/display the application in a web browser
-  * You must be able to view/display pod CPU and RAM usage in New Relic.
+  * You must be able to view/display pod CPU and RAM usage over time, on a graph.
 
 ## Extra Credit
   * Host your Kubernetes cluster in AWS
@@ -30,7 +30,8 @@ Some requirements are left intentionally vague:
   * Deploy your application with Helm
   * Deploy your infrastructure with Terraform
   * Install a Kubernetes Dashboard
-  * Install New Relic APM in your application
+  * Install New Relic Infrastructure in Kubernetes (monitoring)
+  * Install New Relic APM in your application (monitoring)
 
 ## Double Extra Credit
   * Enable us to load your application in our browser
