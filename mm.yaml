@@ -1,0 +1,86 @@
+---
+kind: Pod
+apiVersion: v1
+metadata:
+  name: hello-node-6dc9575cd-tfnc9-test
+  generateName: hello-node-6dc9575cd-
+  namespace: default
+  selfLink: "/api/v1/namespaces/default/pods/hello-node-6dc9575cd-tfnc9"
+  uid: 625fdbd5-ae20-11eb-8a18-080027f75ea3
+  resourceVersion: '17005'
+  creationTimestamp: '2021-05-06T04:06:07Z'
+  labels:
+    app: hello-node
+    pod-template-hash: '287513178'
+  ownerReferences:
+  - apiVersion: extensions/v1beta1
+    kind: ReplicaSet
+    name: hello-node-6dc9575cd
+    uid: 4b98331d-ae14-11eb-8a18-080027f75ea3
+    controller: true
+    blockOwnerDeletion: true
+spec:
+  volumes:
+  - name: default-token-9pw8c
+    secret:
+      secretName: default-token-9pw8c
+      defaultMode: 420
+  containers:
+  - name: echoserver
+    image: k8s.gcr.io/echoserver:1.4
+    resources: {}
+    volumeMounts:
+    - name: default-token-9pw8c
+      readOnly: true
+      mountPath: "/var/run/secrets/kubernetes.io/serviceaccount"
+    terminationMessagePath: "/dev/termination-log"
+    terminationMessagePolicy: File
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always
+  terminationGracePeriodSeconds: 30
+  dnsPolicy: ClusterFirst
+  serviceAccountName: default
+  serviceAccount: default
+  nodeName: minikube
+  securityContext: {}
+  schedulerName: default-scheduler
+  tolerations:
+  - key: node.kubernetes.io/not-ready
+    operator: Exists
+    effect: NoExecute
+    tolerationSeconds: 300
+  - key: node.kubernetes.io/unreachable
+    operator: Exists
+    effect: NoExecute
+    tolerationSeconds: 300
+status:
+  phase: Running
+  conditions:
+  - type: Initialized
+    status: 'True'
+    lastProbeTime:
+    lastTransitionTime: '2021-05-06T04:06:07Z'
+  - type: Ready
+    status: 'True'
+    lastProbeTime:
+    lastTransitionTime: '2021-05-06T04:06:10Z'
+  - type: PodScheduled
+    status: 'True'
+    lastProbeTime:
+    lastTransitionTime: '2021-05-06T04:06:07Z'
+  hostIP: 10.0.2.15
+  podIP: 172.17.0.9
+  startTime: '2021-05-06T04:06:07Z'
+  containerStatuses:
+  - name: echoserver
+    state:
+      running:
+        startedAt: '2021-05-06T04:06:08Z'
+    lastState: {}
+    ready: true
+    restartCount: 0
+    image: k8s.gcr.io/echoserver:1.4
+    imageID: docker-pullable://k8s.gcr.io/echoserver@sha256:5d99aa1120524c801bc8c1a7077e8f5ec122ba16b6dda1a5d3826057f67b9bcb
+    containerID: docker://4f73092395fe3ac101b2e6e94316ddd7c6458631fe3671c8d67db54808420330
+  qosClass: BestEffort
+
